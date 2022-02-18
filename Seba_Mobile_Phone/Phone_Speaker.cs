@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Seba_Mobile_Phone
 {
-    class Phone_Keyboard
+    class Phone_Speaker
     {
     }
 }
