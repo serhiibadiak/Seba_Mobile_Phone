@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Seba_Mobile_Phone
+namespace Seba_Mobile_Phone.Interfaces
 {
-    class Phone_Speaker
+    public interface ICameraPhoto
     {
     }
 }

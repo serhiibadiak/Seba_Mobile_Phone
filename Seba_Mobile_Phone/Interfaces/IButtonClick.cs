@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Seba_Mobile_Phone
+namespace Seba_Mobile_Phone.Interfaces
 {
-    class Phone_Microphone
+    public interface IButtonClick
     {
-
     }
 }
