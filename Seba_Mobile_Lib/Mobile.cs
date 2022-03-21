@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Seba_Mobile_Phone.Phone_Parts;
-using Seba_Mobile_Phone.Interfaces;
+using Seba_Mobile_Lib.Phone_Parts;
+using Seba_Mobile_Lib.Interfaces;
 
-namespace Seba_Mobile_Phone
+namespace Seba_Mobile_Lib
 {
     public abstract class Mobile
     {

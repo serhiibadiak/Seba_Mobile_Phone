@@ -99,4 +99,4 @@ namespace Seba_MobilePhone_ConsoleApp
         public SimCorp_Phone(IPlayback PlaybackComp, ICharge ChargeComp, INotification NotificationComp)
             : base(PlaybackComp, ChargeComp, NotificationComp) { }
     }
-} 
+}

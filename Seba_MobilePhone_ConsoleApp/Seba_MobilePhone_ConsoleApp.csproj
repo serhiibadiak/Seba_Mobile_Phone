@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Seba_Mobile_Phone\Seba_Mobile_Phone.csproj" />
+    <ProjectReference Include="..\Seba_Mobile_Lib\Seba_Mobile_Lib.csproj" />
   </ItemGroup>
 
 </Project>

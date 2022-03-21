@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Seba_Mobile_Phone.Interfaces
+namespace Seba_Mobile_Lib.Interfaces
 {
-    public interface IBatteryCharging
+    public interface IMicrophoneRecording
     {
     }
 }
