@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Seba_Mobile_Lib.Interfaces;
+﻿using Seba_Mobile_Lib.Interfaces;
 
 namespace Seba_Mobile_Lib
 {
-    public abstract class TelecomModuleBase : ITelecomConnect
+    public abstract class TelecomModuleBase : IConnect
     {
-        /*public string WIFI_Standart { get; set; }
-        public string Bluetooth_Standart { get; set; }
-        public string[] GPS_Standarts { get; set; }
-        public string[] Mobile_Standarts { get; set; }
-        public bool NFC { get; set; }*/
+        public string WIFIStandart { get; set; }
+        public string BluetoothStandart { get; set; }
+        public string[] GPSStandarts { get; set; }
+        public string[] MobileStandarts { get; set; }
+        public bool NFC { get; set; }
         public abstract void MakeConnection();
     }
 }

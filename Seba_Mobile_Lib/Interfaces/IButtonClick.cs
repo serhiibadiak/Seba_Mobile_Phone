@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Seba_Mobile_Lib.Interfaces
+﻿namespace Seba_Mobile_Lib.Interfaces
 {
     public interface IButtonClick
     {
+        void Click(IButtonClick button);
     }
 }

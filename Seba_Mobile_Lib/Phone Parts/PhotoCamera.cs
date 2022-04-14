@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using Seba_Mobile_Lib.Interfaces;
-using System.Text;
 
 namespace Seba_Mobile_Lib.Phone_Parts
 {

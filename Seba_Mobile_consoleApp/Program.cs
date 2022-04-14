@@ -3,6 +3,9 @@ using Seba_Mobile_Lib;
 using Seba_Mobile_Lib.Phone_Parts;
 using Seba_Mobile_Lib.Interfaces;
 using Seba_Mobile_Lib.Classes;
+using Seba_Mobile_Lib.Notification_devices;
+using Seba_Mobile_Lib.Headsets;
+using Seba_Mobile_Lib.Charges;
 
 namespace Seba_MobilePhone_ConsoleApp
 {
@@ -34,7 +37,6 @@ namespace Seba_MobilePhone_ConsoleApp
                     return new ChinaHeadset(new ConsoleOutput());
                 case 4:
                     return new PhoneSpeaker(new ConsoleOutput());
-
                 default:
                     return new ChinaHeadset(new ConsoleOutput());
             }
@@ -64,7 +66,7 @@ namespace Seba_MobilePhone_ConsoleApp
             switch (indicator)
             {
                 case 1:
-                    return new IWatch(new ConsoleOutput());
+                    return new AppleWatch(new ConsoleOutput());
                 case 2:
                     return new XiaomiWatch(new ConsoleOutput());
                 case 3:
@@ -78,23 +80,17 @@ namespace Seba_MobilePhone_ConsoleApp
     }
     public class SimCorp_Phone : Mobile
     {
-        public override ScreenBase Screen { get { return rgb_screen; } }
-        private readonly RGB_Screen rgb_screen = new Touch_Screen();
-        public override CameraBase Camera { get { return video_cam; } }
-        private readonly Video_Camera video_cam = new Video_Camera();
-        public override KeyboardBase Keyboard { get { return kboard; } }
-        private readonly Keyboard kboard = new Keyboard();
-        public override BatteryBase Battery { get { return battery; } }
-        private readonly Battery battery = new Battery();
-        public override BodyBase Body { get { return body; } }
-        private readonly Body body = new Body();
-        public override SpeakerBase Speaker { get { return speaker; } }
-        private readonly Speaker speaker = new Speaker();
-        public override MicrophoneBase Microphone { get { return microphone; } }
-        private readonly Microphone microphone = new Microphone();
+        public override ScreenBase Screen { get { return rgbScreen; } }
+        private readonly RGBScreen rgbScreen = new TouchScreen();
+        public override CameraBase Camera { get { return videoCam; } }
+        private readonly VideoCamera videoCam = new VideoCamera();
         public override TelecomModuleBase TelecomModule { get { return tmodule; } }
         private readonly TelecomModule tmodule = new TelecomModule();
-
+        public new Keyboard Kboard { get; }
+        public new Battery Battery { get; }
+        public new Body Body { get; }
+        public new Microphone Microphone { get; }
+        public new Speaker Speaker { get; }
         public IPlayback PlaybackDevice;
         public SimCorp_Phone(IPlayback PlaybackComp, ICharge ChargeComp, INotification NotificationComp)
             : base(PlaybackComp, ChargeComp, NotificationComp) { }

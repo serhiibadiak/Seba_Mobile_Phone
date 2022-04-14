@@ -1,7 +1,7 @@
 ﻿namespace Seba_Mobile_Lib.Interfaces
 {
-    public interface ICharge
+    interface IConnect
     {
-        void Charge();
+        void MakeConnection();
     }
 }

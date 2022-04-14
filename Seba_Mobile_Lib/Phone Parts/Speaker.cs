@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Seba_Mobile_Lib
 {
-    public class Speaker : SpeakerBase
+    public class Speaker
     {
-        public override void MakeSound()
+        public void MakeSound()
         {
             Console.WriteLine("Is making sound");
         }

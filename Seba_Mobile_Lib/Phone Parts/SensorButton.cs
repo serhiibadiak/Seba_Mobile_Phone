@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Seba_Mobile_Lib.Interfaces;
 
 
 namespace Seba_Mobile_Lib
 {
-    public class Sensor_Button : ButtonBase
+    public class SensorButton : ButtonBase
     {     
         public override void Click(IButtonClick button)
         {

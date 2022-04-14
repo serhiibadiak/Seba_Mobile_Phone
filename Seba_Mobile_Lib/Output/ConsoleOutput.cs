@@ -1,7 +1,7 @@
-﻿using System;
-using Seba_Mobile_Lib.Interfaces;
+﻿using Seba_Mobile_Lib.Interfaces;
+using System;
 
-namespace Seba_Mobile_Lib.Classes
+namespace Seba_Mobile_Lib.Output
 {
     public class ConsoleOutput : IOutput
     {

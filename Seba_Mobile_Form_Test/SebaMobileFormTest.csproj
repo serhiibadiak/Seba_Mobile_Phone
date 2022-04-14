@@ -57,9 +57,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Seba_Mobile_Lib\Seba_Mobile_Lib.csproj">
+    <ProjectReference Include="..\Seba_Mobile_Lib\SebaMobileLib.csproj">
       <Project>{807ff7ca-3164-4695-b554-102dac9d4c25}</Project>
-      <Name>Seba_Mobile_Lib</Name>
+      <Name>SebaMobileLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

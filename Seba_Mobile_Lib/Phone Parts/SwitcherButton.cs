@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Seba_Mobile_Lib.Interfaces;
 
 
 namespace Seba_Mobile_Lib
 {
-    public class Switcher_Button : ButtonBase
+    public class SwitcherButton : ButtonBase
     {
         public override void Click(IButtonClick button)
         {

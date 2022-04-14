@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Seba_Mobile_Lib.Interfaces
+﻿namespace Seba_Mobile_Lib.Interfaces
 {
     public interface IScreenImage
     {
+        void ShowImage(IScreenImage screen);
+        void ShowImage(IScreenImage screen, int brigthness);
     }
 }

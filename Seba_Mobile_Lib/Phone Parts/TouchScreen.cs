@@ -4,11 +4,9 @@ using Seba_Mobile_Lib.Interfaces;
 
 namespace Seba_Mobile_Lib.Phone_Parts
 {
-    public class Touch_Screen : RGB_Screen
+    public class TouchScreen : RGBScreen
 
     {
-        /*public string Touchscreen_Type { get; set; } 
-        public bool Foldable { get; set; }*/
         public override void ShowImage(IScreenImage screen)
         {
             Console.WriteLine("Show Colore Image on multitouch screen");

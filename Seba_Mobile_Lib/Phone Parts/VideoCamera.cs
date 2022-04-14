@@ -1,15 +1,13 @@
 ﻿using Seba_Mobile_Lib.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Seba_Mobile_Lib
 {
-    public class Video_Camera : CameraBase
+    public class VideoCamera : CameraBase
     {
-        public string Position { get; set; } //front or back
-        public Size Video_Resolution { get; set; }
-        public string[] Features { get; set; } //slowmo etc.
+        public string Position { get; set; } 
+        public Size VideoResolution { get; set; }
+        public string[] Features { get; set; }
         public override void MakePhoto(ICameraPhoto camphoto)
         {
             Console.WriteLine("Video Camera Make photo");

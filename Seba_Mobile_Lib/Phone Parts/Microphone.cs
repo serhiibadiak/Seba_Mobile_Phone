@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Seba_Mobile_Lib
 {
-    public class Microphone : MicrophoneBase
+    public class Microphone
     {
-        public override void RecordSound()
+        public void RecordSound()
         {
             Console.WriteLine("Is recording sound");
         }

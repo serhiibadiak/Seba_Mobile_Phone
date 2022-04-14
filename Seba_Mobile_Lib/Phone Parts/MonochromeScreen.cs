@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Seba_Mobile_Lib.Interfaces;
 
 
 namespace Seba_Mobile_Lib.Phone_Parts
 {
-    public class Monochrome_Screen : ScreenBase
+    public class MonochromeScreen : ScreenBase
     {
         public override void ShowImage(IScreenImage screen)
         {

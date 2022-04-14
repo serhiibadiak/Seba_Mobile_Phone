@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seba_Mobile_Form", "Seba_Mobile_Form\Seba_Mobile_Form.csproj", "{53852FE8-6729-44D9-A245-406F7B9DE850}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SebaMobileForm", "Seba_Mobile_Form\SebaMobileForm.csproj", "{53852FE8-6729-44D9-A245-406F7B9DE850}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seba_Mobile_Lib", "Seba_Mobile_Lib\Seba_Mobile_Lib.csproj", "{807FF7CA-3164-4695-B554-102DAC9D4C25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SebaMobileLib", "Seba_Mobile_Lib\SebaMobileLib.csproj", "{807FF7CA-3164-4695-B554-102DAC9D4C25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seba_Mobile_Form_Test", "Seba_Mobile_Form_Test\Seba_Mobile_Form_Test.csproj", "{7B9B0F7E-0B29-4CAF-AB44-C7D537AF7CF3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SebaMobileFormTest", "Seba_Mobile_Form_Test\SebaMobileFormTest.csproj", "{7B9B0F7E-0B29-4CAF-AB44-C7D537AF7CF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seba_MobilePhone_ConsoleApp", "Seba_Mobile_consoleApp\Seba_MobilePhone_ConsoleApp.csproj", "{D6482ACF-C106-47D0-826F-9AAFF18C5C1F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SebaMobilePhoneConsoleApp", "Seba_Mobile_consoleApp\SebaMobilePhoneConsoleApp.csproj", "{D6482ACF-C106-47D0-826F-9AAFF18C5C1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

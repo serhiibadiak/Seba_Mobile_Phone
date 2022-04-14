@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Seba_Mobile_Lib.Interfaces;
+﻿using Seba_Mobile_Lib.Interfaces;
 
 namespace Seba_Mobile_Lib
 {

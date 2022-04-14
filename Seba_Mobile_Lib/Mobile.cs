@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 using Seba_Mobile_Lib.Phone_Parts;
 using Seba_Mobile_Lib.Interfaces;
 
@@ -13,14 +11,19 @@ namespace Seba_Mobile_Lib
             PlaybackComponent = PlaybackComp;
             PhoneCharger = ChargeComp;
             SmartWatch = NotificationComp;
+            this.Kboard = new Keyboard();
+            this.Battery = new Battery();
+            this.Body = new Body();
+            this.Speaker = new Speaker();
+            this.Microphone = new Microphone();
         }
         public abstract ScreenBase Screen { get; }
         public abstract CameraBase Camera { get; }
-        public abstract KeyboardBase Keyboard { get; }
-        public abstract BatteryBase Battery { get; }
-        public abstract BodyBase Body { get; }
-        public abstract SpeakerBase Speaker { get; }
-        public abstract MicrophoneBase Microphone { get; }
+        public Keyboard Kboard { get; }
+        public Battery Battery{ get; }
+        public Body Body { get; }
+        public Speaker Speaker { get; }
+        public Microphone Microphone { get; }
         public abstract TelecomModuleBase TelecomModule { get; }
         public IPlayback PlaybackComponent { get; set; }
         public ICharge PhoneCharger { get; set; }
@@ -42,7 +45,7 @@ namespace Seba_Mobile_Lib
             StringBuilder descriptionBuilder = new StringBuilder();
             descriptionBuilder.AppendLine($"Screen Type:\t {Screen.ToString()}");
             descriptionBuilder.AppendLine($"Camera Type:\t {Camera.ToString()}");
-            descriptionBuilder.AppendLine($"Keyboard Type:\t {Keyboard.ToString()}");
+            descriptionBuilder.AppendLine($"Keyboard Type:\t {Kboard.ToString()}");
             descriptionBuilder.AppendLine($"Battery Type:\t {Battery.ToString()}");
             descriptionBuilder.AppendLine($"Body Type:\t {Body.ToString()}");
             descriptionBuilder.AppendLine($"Speaker Type:\t {Speaker.ToString()}");
