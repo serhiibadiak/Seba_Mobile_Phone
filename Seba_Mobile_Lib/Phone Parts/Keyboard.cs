@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 
-namespace Seba_Mobile_Lib.Phone_Parts
+namespace SebaMobileLib.PhoneParts
 {
     public class Keyboard
     {
         public List<ButtonBase> Buttons;
-        public int Buttons_Count { get; }
+        public int ButtonsCount { get; }
         public void AddButton(ButtonBase button)
         {
             Buttons.Add(button);

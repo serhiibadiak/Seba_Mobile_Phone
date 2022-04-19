@@ -1,7 +1,7 @@
-﻿using Seba_Mobile_Lib.Interfaces;
-using Seba_Mobile_Lib.Phone_Parts;
+﻿using SebaMobileLib.Interfaces;
+using SebaMobileLib.PhoneParts;
 
-namespace Seba_Mobile_Lib
+namespace SebaMobileLib
 {
     public class SimCorpMobile : Mobile
     {
@@ -9,11 +9,9 @@ namespace Seba_Mobile_Lib
         private readonly RGBScreen rgb_screen = new TouchScreen();
         public override CameraBase Camera { get { return VideoCam; } }
         private readonly VideoCamera VideoCam = new VideoCamera();
-       
+
         public override TelecomModuleBase TelecomModule { get { return Tmodule; } }
         private readonly TelecomModule Tmodule = new TelecomModule();
-
-        public Keyboard Kboard { get; }
         public new Battery Battery { get; }
         public new Body Body { get; }
         public new Microphone Microphone { get; }

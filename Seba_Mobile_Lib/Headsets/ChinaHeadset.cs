@@ -1,6 +1,6 @@
-﻿using Seba_Mobile_Lib.Interfaces;
+﻿using SebaMobileLib.Interfaces;
 
-namespace Seba_Mobile_Lib.Headsets
+namespace SebaMobileLib.Headsets
 {
     public class ChinaHeadset : IPlayback
     {
@@ -12,7 +12,7 @@ namespace Seba_Mobile_Lib.Headsets
         }
         public void Play(string data)
         {
-            Output.WriteLine(string.Format("{0} is playing on {1}", data.ToString(), nameof(ChinaHeadset)));
+            Output.WriteLine($"{data} is playing on {nameof(ChinaHeadset)}");
         }
         public override string ToString()
         {

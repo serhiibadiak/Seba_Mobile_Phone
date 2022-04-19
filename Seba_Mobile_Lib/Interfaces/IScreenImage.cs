@@ -1,4 +1,4 @@
-﻿namespace Seba_Mobile_Lib.Interfaces
+﻿namespace SebaMobileLib.Interfaces
 {
     public interface IScreenImage
     {

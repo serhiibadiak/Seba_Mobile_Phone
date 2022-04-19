@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace Seba_Mobile_Form.Properties
+namespace SebaMobileForm.Properties
 {
     /// <summary>
     ///   Класс ресурсов со строгим типом для поиска локализованных строк и пр.

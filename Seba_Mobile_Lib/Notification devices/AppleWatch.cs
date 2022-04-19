@@ -1,6 +1,6 @@
-﻿using Seba_Mobile_Lib.Interfaces;
+﻿using SebaMobileLib.Interfaces;
 
-namespace Seba_Mobile_Lib.Notification_devices
+namespace SebaMobileLib.NotificationDevices
 {
     public class AppleWatch : INotification
     {
@@ -11,7 +11,7 @@ namespace Seba_Mobile_Lib.Notification_devices
         }
         public void ShowNotification(string Message)
         {
-            Output.WriteLine(string.Format("{0}: {1}", nameof(AppleWatch), Message));
+            Output.WriteLine($"{nameof(AppleWatch)}: {Message}");
         }
         public override string ToString()
         {

@@ -1,11 +1,11 @@
-﻿using System;
-using Seba_Mobile_Lib.Interfaces;
+﻿using SebaMobileLib.Interfaces;
+using System;
 
-namespace Seba_Mobile_Lib.Phone_Parts
+namespace SebaMobileLib.PhoneParts
 {
-   public class PhotoCamera : CameraBase
+    public class PhotoCamera : CameraBase
     {
-        public override void MakePhoto(ICameraPhoto camphoto) 
+        public override void MakePhoto(ICameraPhoto camPhoto)
         {
             Console.WriteLine("Make photo");
         }

@@ -1,6 +1,6 @@
-﻿namespace Seba_Mobile_Form
+﻿namespace SebaMobileForm
 {
-    partial class SebaMobile_Form
+    partial class SebaMobileForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -233,9 +233,9 @@
             this.Controls.Add(this.groupBoxHeadset);
             this.Controls.Add(this.InfoTextBox);
             this.Controls.Add(this.ApplyButton);
-            this.Name = "SebaMobile_Form";
+            this.Name = "SebaMobileForm";
             this.Text = "Seba Mobile";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.SebaMobileFormLoad);
             this.groupBoxHeadset.ResumeLayout(false);
             this.groupBoxHeadset.PerformLayout();
             this.groupBoxCharge.ResumeLayout(false);

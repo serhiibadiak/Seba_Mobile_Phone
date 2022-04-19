@@ -1,6 +1,6 @@
-﻿using Seba_Mobile_Lib.Interfaces;
+﻿using SebaMobileLib.Interfaces;
 
-namespace Seba_Mobile_Lib.Charges
+namespace SebaMobileLib.Charges
 {
     public class IPhoneCharge : ICharge
     {
@@ -11,7 +11,7 @@ namespace Seba_Mobile_Lib.Charges
         }
         public void Charge()
         {
-            Output.WriteLine(string.Format("Charging by {0}", nameof(IPhoneCharge)));
+            Output.WriteLine($"Charging by {nameof(IPhoneCharge)}");
         }
         public override string ToString()
         {

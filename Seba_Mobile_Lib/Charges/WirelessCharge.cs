@@ -2,20 +2,20 @@
 
 namespace SebaMobileLib.Charges
 {
-    public class MicroUsbCharge : ICharge
+    public class WirelessCharge : ICharge
     {
         public IOutput Output;
-        public MicroUsbCharge(IOutput output)
+        public WirelessCharge(IOutput output)
         {
             Output = output;
         }
         public void Charge()
         {
-            Output.WriteLine($"Charging by {nameof(MicroUsbCharge)}");
+            Output.WriteLine($"Charging by {nameof(WirelessCharge)}");
         }
         public override string ToString()
         {
-            return "MicroUsb Charge";
+            return "Wireless Charge";
         }
     }
 }

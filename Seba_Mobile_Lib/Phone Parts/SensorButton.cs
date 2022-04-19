@@ -1,11 +1,11 @@
-﻿using System;
-using Seba_Mobile_Lib.Interfaces;
+﻿using SebaMobileLib.Interfaces;
+using System;
 
 
-namespace Seba_Mobile_Lib
+namespace SebaMobileLib
 {
     public class SensorButton : ButtonBase
-    {     
+    {
         public override void Click(IButtonClick button)
         {
             Console.WriteLine("Sensor button Clicked");

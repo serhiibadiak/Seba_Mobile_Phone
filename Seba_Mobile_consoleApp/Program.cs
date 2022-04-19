@@ -1,32 +1,46 @@
-﻿using System;
-using Seba_Mobile_Lib;
-using Seba_Mobile_Lib.Phone_Parts;
-using Seba_Mobile_Lib.Interfaces;
-using Seba_Mobile_Lib.Classes;
-using Seba_Mobile_Lib.Notification_devices;
-using Seba_Mobile_Lib.Headsets;
-using Seba_Mobile_Lib.Charges;
+﻿using SebaMobileLib;
+using SebaMobileLib.Charges;
+using SebaMobileLib.Headsets;
+using SebaMobileLib.Interfaces;
+using SebaMobileLib.NotificationDevices;
+using SebaMobileLib.Output;
+using System;
 
-namespace Seba_MobilePhone_ConsoleApp
+namespace SebaMobilePhoneConsoleApp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            SimCorp_Phone SC_Phone = new SimCorp_Phone(ChoosePlayback(), ChooseCharge(), ChooseWatches());
-            Console.WriteLine(SC_Phone.GetDescription());
+            SimCorpMobile SCPhone = new SimCorpMobile(ChoosePlayback(), ChooseCharge(), ChooseWatches());
+            Console.WriteLine(SCPhone.GetDescription());
 
-            SC_Phone.Play("Journey - Don`t stop beleeving");
-            SC_Phone.Charge();
-            SC_Phone.ShowNotification("Hello world!");
+            SCPhone.Play("Journey - Don`t stop beleeving");
+            SCPhone.Charge();
+            SCPhone.ShowNotification("Hello world!");
 
             Console.ReadLine();
         }
         private static IPlayback ChoosePlayback()
         {
-            Console.WriteLine("Choose Device to play audio:\n1 - IPhoneHeadset\n2 - XiaomyHeadset\n3 - ChinaHeadset\n4 - PhoneSpeaker\n");
-            int indicator = 0;
-            indicator = Convert.ToInt32(Console.ReadLine());
+            int indicator;
+            while (true)
+            {
+                Console.WriteLine("Choose Device to play audio:\n1 - IPhoneHeadset\n2 - XiaomyHeadset\n3 - ChinaHeadset\n4 - PhoneSpeaker\n");
+                var input = Console.ReadLine();
+                try
+                {
+                    indicator = Convert.ToInt32(input);
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Please choose between variants.");
+                    continue;
+                }
+                if (indicator > 0 && indicator < 5) break;
+                else
+                    Console.WriteLine("Please choose between variants.");
+            }
             switch (indicator)
             {
                 case 1:
@@ -43,9 +57,24 @@ namespace Seba_MobilePhone_ConsoleApp
         }
         private static ICharge ChooseCharge()
         {
-            Console.WriteLine("Choose charge:\n1 - MicroUSB Charge\n2 - IPhone Charge\n3 - WireLess Charge\n");
-            int indicator = 0;
-            indicator = Convert.ToInt32(Console.ReadLine());
+            int indicator;
+            while (true)
+            {
+                Console.WriteLine("Choose charge:\n1 - MicroUSB Charge\n2 - IPhone Charge\n3 - WireLess Charge\n");
+                var input = Console.ReadLine();
+                try
+                {
+                    indicator = Convert.ToInt32(input);
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Please choose between variants.");
+                    continue;
+                }
+                if (indicator > 0 && indicator < 4) break;
+                else
+                    Console.WriteLine("Please choose between variants.");
+            }
             switch (indicator)
             {
                 case 1:
@@ -53,16 +82,31 @@ namespace Seba_MobilePhone_ConsoleApp
                 case 2:
                     return new IPhoneCharge(new ConsoleOutput());
                 case 3:
-                    return new WirlessCharge(new ConsoleOutput());
+                    return new WirelessCharge(new ConsoleOutput());
                 default:
                     return new MicroUsbCharge(new ConsoleOutput());
             }
         }
         private static INotification ChooseWatches()
         {
-            Console.WriteLine("Choose charge:\n1 - Apple Watch\n2 - Xiaomi Watch\n3 - Samsung Watch\n4 - NoName Watch\n");
-            int indicator = 0;
-            indicator = Convert.ToInt32(Console.ReadLine());
+            int indicator;
+            while (true)
+            {
+                Console.WriteLine("Choose charge:\n1 - Apple Watch\n2 - Xiaomi Watch\n3 - Samsung Watch\n4 - NoName Watch\n");
+                var input = Console.ReadLine();
+                try
+                {
+                    indicator = Convert.ToInt32(input);
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Please choose between variants.");
+                    continue;
+                }
+                if (indicator > 0 && indicator < 5) break;
+                else
+                    Console.WriteLine("Please choose between variants.");
+            }
             switch (indicator)
             {
                 case 1:
@@ -77,22 +121,5 @@ namespace Seba_MobilePhone_ConsoleApp
                     return new NoNameWatch(new ConsoleOutput());
             }
         }
-    }
-    public class SimCorp_Phone : Mobile
-    {
-        public override ScreenBase Screen { get { return rgbScreen; } }
-        private readonly RGBScreen rgbScreen = new TouchScreen();
-        public override CameraBase Camera { get { return videoCam; } }
-        private readonly VideoCamera videoCam = new VideoCamera();
-        public override TelecomModuleBase TelecomModule { get { return tmodule; } }
-        private readonly TelecomModule tmodule = new TelecomModule();
-        public new Keyboard Kboard { get; }
-        public new Battery Battery { get; }
-        public new Body Body { get; }
-        public new Microphone Microphone { get; }
-        public new Speaker Speaker { get; }
-        public IPlayback PlaybackDevice;
-        public SimCorp_Phone(IPlayback PlaybackComp, ICharge ChargeComp, INotification NotificationComp)
-            : base(PlaybackComp, ChargeComp, NotificationComp) { }
     }
 }

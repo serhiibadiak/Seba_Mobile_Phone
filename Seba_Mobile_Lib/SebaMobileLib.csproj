@@ -44,9 +44,8 @@
   <ItemGroup>
     <Compile Include="Charges\IPhoneCharge.cs" />
     <Compile Include="Charges\MicroUsbCharge.cs" />
-    <Compile Include="Charges\WirlessCharge.cs" />
-    <Compile Include="Classes\ConsoleOutput.cs" />
-    <Compile Include="Classes\Size.cs" />
+    <Compile Include="Charges\WirelessCharge.cs" />
+    <Compile Include="Misc\Size.cs" />
     <Compile Include="Headsets\ChinaHeadset.cs" />
     <Compile Include="Headsets\IPhoneHeadset.cs" />
     <Compile Include="Headsets\PhoneSpeaker.cs" />
@@ -65,7 +64,7 @@
     <Compile Include="Notification devices\SamsungWatch.cs" />
     <Compile Include="Notification devices\XiaomiWatch.cs" />
     <Compile Include="Output\ConsoleOutput.cs" />
-    <Compile Include="Output\TextBoxOutput.cs" />
+    <Compile Include="Output\ContainerOutput.cs" />
     <Compile Include="Phone Parts\Battery.cs" />
     <Compile Include="Phone Parts\Body.cs" />
     <Compile Include="Phone Parts\Button.cs" />
@@ -87,7 +86,7 @@
     <Compile Include="Phone Parts\TouchScreen.cs" />
     <Compile Include="Phone Parts\VideoCamera.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SC_Mobile.cs" />
+    <Compile Include="SCMobile.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

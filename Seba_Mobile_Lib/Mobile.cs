@@ -1,12 +1,12 @@
-﻿using System.Text;
-using Seba_Mobile_Lib.Phone_Parts;
-using Seba_Mobile_Lib.Interfaces;
+﻿using SebaMobileLib.Interfaces;
+using SebaMobileLib.PhoneParts;
+using System.Text;
 
-namespace Seba_Mobile_Lib
+namespace SebaMobileLib
 {
     public abstract class Mobile
     {
-        public Mobile(IPlayback PlaybackComp, ICharge ChargeComp, INotification NotificationComp )
+        public Mobile(IPlayback PlaybackComp, ICharge ChargeComp, INotification NotificationComp)
         {
             PlaybackComponent = PlaybackComp;
             PhoneCharger = ChargeComp;
@@ -20,7 +20,7 @@ namespace Seba_Mobile_Lib
         public abstract ScreenBase Screen { get; }
         public abstract CameraBase Camera { get; }
         public Keyboard Kboard { get; }
-        public Battery Battery{ get; }
+        public Battery Battery { get; }
         public Body Body { get; }
         public Speaker Speaker { get; }
         public Microphone Microphone { get; }
@@ -28,7 +28,7 @@ namespace Seba_Mobile_Lib
         public IPlayback PlaybackComponent { get; set; }
         public ICharge PhoneCharger { get; set; }
         public INotification SmartWatch { get; set; }
-        public void Play ( string data )
+        public void Play(string data)
         {
             PlaybackComponent.Play(data);
         }
@@ -36,7 +36,7 @@ namespace Seba_Mobile_Lib
         {
             PhoneCharger.Charge();
         }
-        public void ShowNotification (string Message)
+        public void ShowNotification(string Message)
         {
             SmartWatch.ShowNotification(Message);
         }
@@ -53,7 +53,7 @@ namespace Seba_Mobile_Lib
             descriptionBuilder.AppendLine($"Telecom_Module Type:\t {TelecomModule.ToString()}");
             return descriptionBuilder.ToString();
         }
-        private void ShowImage(IScreenImage screenimage) 
+        private void ShowImage(IScreenImage screenimage)
         {
             Screen.ShowImage(screenimage);
         }

@@ -1,8 +1,8 @@
-﻿using System;
-using Seba_Mobile_Lib.Interfaces;
+﻿using SebaMobileLib.Interfaces;
+using System;
 
 
-namespace Seba_Mobile_Lib.Phone_Parts
+namespace SebaMobileLib.PhoneParts
 {
     public class TouchScreen : RGBScreen
 

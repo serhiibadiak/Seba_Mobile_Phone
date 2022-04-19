@@ -1,4 +1,4 @@
-﻿namespace Seba_Mobile_Lib
+﻿namespace SebaMobileLib
 {
     public class Size
     {

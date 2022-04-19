@@ -1,12 +1,12 @@
-﻿using Seba_Mobile_Lib.Interfaces;
+﻿using SebaMobileLib.Interfaces;
 
-namespace Seba_Mobile_Lib
+namespace SebaMobileLib
 {
     public abstract class CameraBase
     {
-        public float Aperture { get; set; } 
-        public int Matrix_Resolurion { get; set; } 
-        public abstract void MakePhoto(ICameraPhoto camphoto);
+        public float Aperture { get; set; }
+        public int MatrixResolurion { get; set; }
+        public abstract void MakePhoto(ICameraPhoto camPhoto);
 
     }
 }

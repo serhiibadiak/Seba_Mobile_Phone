@@ -1,13 +1,13 @@
-﻿using Seba_Mobile_Lib.Interfaces;
+﻿using SebaMobileLib.Interfaces;
 
-namespace Seba_Mobile_Lib.Output
+namespace SebaMobileLib.Output
 {
-    public class TextBoxOutput : IOutput
+    public class ContainerOutput : IOutput
     {
-        private System.Windows.Forms.RichTextBox container;
-        public TextBoxOutput(System.Windows.Forms.RichTextBox textbox)
+        private dynamic container;
+        public ContainerOutput(dynamic outputContainer)
         {
-            container = textbox;
+            container = outputContainer;
         }
         public void Write(string text)
         {

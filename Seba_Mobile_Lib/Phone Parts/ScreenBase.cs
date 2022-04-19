@@ -1,6 +1,6 @@
-﻿using Seba_Mobile_Lib.Interfaces;
+﻿using SebaMobileLib.Interfaces;
 
-namespace Seba_Mobile_Lib
+namespace SebaMobileLib
 {
     public abstract class ScreenBase
     {

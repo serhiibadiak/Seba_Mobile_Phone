@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace Seba_Mobile_Form.Properties
+namespace SebaMobileForm.Properties
 {
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
