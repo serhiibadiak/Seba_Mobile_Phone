@@ -1,4 +1,5 @@
 ﻿using SebaMobileLib.Interfaces;
+using SebaMobileLib.Misc;
 using SebaMobileLib.PhoneParts;
 
 namespace SebaMobileLib
@@ -17,7 +18,11 @@ namespace SebaMobileLib
         public new Microphone Microphone { get; }
         public new Speaker Speaker { get; }
         public IPlayback PlaybackDevice;
+        public SMSProvider SMSProvider { get; set; }
         public SimCorpMobile(IPlayback PlaybackComp, ICharge ChargeComp, INotification NotificationComp)
-            : base(PlaybackComp, ChargeComp, NotificationComp) { }
+            : base(PlaybackComp, ChargeComp, NotificationComp)
+        {
+            SMSProvider = new SMSProvider();
+        }
     }
 }

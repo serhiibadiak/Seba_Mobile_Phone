@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SebaMobileFormTest", "Seba_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SebaMobilePhoneConsoleApp", "Seba_Mobile_consoleApp\SebaMobilePhoneConsoleApp.csproj", "{D6482ACF-C106-47D0-826F-9AAFF18C5C1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SebaMobileMessages", "SebaMobileMessages\SebaMobileMessages.csproj", "{189C64AB-C397-4E42-A90D-8FE4C2C92CA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SebaMobileMessagesTest", "SebaMobileMessagesTest\SebaMobileMessagesTest.csproj", "{3765DCAB-A4A0-4508-83F2-BE720DC1EE73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{D6482ACF-C106-47D0-826F-9AAFF18C5C1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6482ACF-C106-47D0-826F-9AAFF18C5C1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6482ACF-C106-47D0-826F-9AAFF18C5C1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{189C64AB-C397-4E42-A90D-8FE4C2C92CA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{189C64AB-C397-4E42-A90D-8FE4C2C92CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{189C64AB-C397-4E42-A90D-8FE4C2C92CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{189C64AB-C397-4E42-A90D-8FE4C2C92CA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3765DCAB-A4A0-4508-83F2-BE720DC1EE73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3765DCAB-A4A0-4508-83F2-BE720DC1EE73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3765DCAB-A4A0-4508-83F2-BE720DC1EE73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3765DCAB-A4A0-4508-83F2-BE720DC1EE73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

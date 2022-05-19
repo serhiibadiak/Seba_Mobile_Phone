@@ -31,19 +31,19 @@
             this.InfoTextBox = new System.Windows.Forms.RichTextBox();
             this.ApplyButton = new System.Windows.Forms.Button();
             this.groupBoxHeadset = new System.Windows.Forms.GroupBox();
-            this.radioButtonPhoneSpeaker = new System.Windows.Forms.RadioButton();
-            this.radioButtonChinaHeadset = new System.Windows.Forms.RadioButton();
-            this.radioButtonXiomiHeadset = new System.Windows.Forms.RadioButton();
             this.radioButtonIPhoneHeadset = new System.Windows.Forms.RadioButton();
+            this.radioButtonXiomiHeadset = new System.Windows.Forms.RadioButton();
+            this.radioButtonChinaHeadset = new System.Windows.Forms.RadioButton();
+            this.radioButtonPhoneSpeaker = new System.Windows.Forms.RadioButton();
             this.groupBoxCharge = new System.Windows.Forms.GroupBox();
-            this.radioButtonWirelessCharge = new System.Windows.Forms.RadioButton();
-            this.radioButtonMicroUSBCharge = new System.Windows.Forms.RadioButton();
             this.radioButtonIPhoneCharge = new System.Windows.Forms.RadioButton();
+            this.radioButtonMicroUSBCharge = new System.Windows.Forms.RadioButton();
+            this.radioButtonWirelessCharge = new System.Windows.Forms.RadioButton();
             this.groupBoxWatch = new System.Windows.Forms.GroupBox();
-            this.radioButtonNoNameWatch = new System.Windows.Forms.RadioButton();
-            this.radioButtonSamsungWatch = new System.Windows.Forms.RadioButton();
-            this.radioButtonXiomiWatch = new System.Windows.Forms.RadioButton();
             this.radioButtonAppleWatch = new System.Windows.Forms.RadioButton();
+            this.radioButtonXiomiWatch = new System.Windows.Forms.RadioButton();
+            this.radioButtonSamsungWatch = new System.Windows.Forms.RadioButton();
+            this.radioButtonNoNameWatch = new System.Windows.Forms.RadioButton();
             this.groupBoxHeadset.SuspendLayout();
             this.groupBoxCharge.SuspendLayout();
             this.groupBoxWatch.SuspendLayout();
@@ -51,7 +51,7 @@
             // 
             // InfoTextBox
             // 
-            this.InfoTextBox.Location = new System.Drawing.Point(12, 153);
+            this.InfoTextBox.Location = new System.Drawing.Point(10, 153);
             this.InfoTextBox.Name = "InfoTextBox";
             this.InfoTextBox.Size = new System.Drawing.Size(365, 99);
             this.InfoTextBox.TabIndex = 3;
@@ -79,27 +79,16 @@
             this.groupBoxHeadset.TabIndex = 15;
             this.groupBoxHeadset.TabStop = false;
             // 
-            // radioButtonPhoneSpeaker
+            // radioButtonIPhoneHeadset
             // 
-            this.radioButtonPhoneSpeaker.AutoSize = true;
-            this.radioButtonPhoneSpeaker.Location = new System.Drawing.Point(6, 78);
-            this.radioButtonPhoneSpeaker.Name = "radioButtonPhoneSpeaker";
-            this.radioButtonPhoneSpeaker.Size = new System.Drawing.Size(99, 17);
-            this.radioButtonPhoneSpeaker.TabIndex = 11;
-            this.radioButtonPhoneSpeaker.TabStop = true;
-            this.radioButtonPhoneSpeaker.Text = "Phone Speaker";
-            this.radioButtonPhoneSpeaker.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonChinaHeadset
-            // 
-            this.radioButtonChinaHeadset.AutoSize = true;
-            this.radioButtonChinaHeadset.Location = new System.Drawing.Point(6, 55);
-            this.radioButtonChinaHeadset.Name = "radioButtonChinaHeadset";
-            this.radioButtonChinaHeadset.Size = new System.Drawing.Size(92, 17);
-            this.radioButtonChinaHeadset.TabIndex = 10;
-            this.radioButtonChinaHeadset.TabStop = true;
-            this.radioButtonChinaHeadset.Text = "ChinaHeadset";
-            this.radioButtonChinaHeadset.UseVisualStyleBackColor = true;
+            this.radioButtonIPhoneHeadset.AutoSize = true;
+            this.radioButtonIPhoneHeadset.Location = new System.Drawing.Point(6, 9);
+            this.radioButtonIPhoneHeadset.Name = "radioButtonIPhoneHeadset";
+            this.radioButtonIPhoneHeadset.Size = new System.Drawing.Size(102, 17);
+            this.radioButtonIPhoneHeadset.TabIndex = 8;
+            this.radioButtonIPhoneHeadset.TabStop = true;
+            this.radioButtonIPhoneHeadset.Text = "IPhone Headset";
+            this.radioButtonIPhoneHeadset.UseVisualStyleBackColor = true;
             // 
             // radioButtonXiomiHeadset
             // 
@@ -112,16 +101,27 @@
             this.radioButtonXiomiHeadset.Text = "Xiomi Headset";
             this.radioButtonXiomiHeadset.UseVisualStyleBackColor = true;
             // 
-            // radioButtonIPhoneHeadset
+            // radioButtonChinaHeadset
             // 
-            this.radioButtonIPhoneHeadset.AutoSize = true;
-            this.radioButtonIPhoneHeadset.Location = new System.Drawing.Point(6, 9);
-            this.radioButtonIPhoneHeadset.Name = "radioButtonIPhoneHeadset";
-            this.radioButtonIPhoneHeadset.Size = new System.Drawing.Size(102, 17);
-            this.radioButtonIPhoneHeadset.TabIndex = 8;
-            this.radioButtonIPhoneHeadset.TabStop = true;
-            this.radioButtonIPhoneHeadset.Text = "IPhone Headset";
-            this.radioButtonIPhoneHeadset.UseVisualStyleBackColor = true;
+            this.radioButtonChinaHeadset.AutoSize = true;
+            this.radioButtonChinaHeadset.Location = new System.Drawing.Point(6, 55);
+            this.radioButtonChinaHeadset.Name = "radioButtonChinaHeadset";
+            this.radioButtonChinaHeadset.Size = new System.Drawing.Size(92, 17);
+            this.radioButtonChinaHeadset.TabIndex = 10;
+            this.radioButtonChinaHeadset.TabStop = true;
+            this.radioButtonChinaHeadset.Text = "ChinaHeadset";
+            this.radioButtonChinaHeadset.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonPhoneSpeaker
+            // 
+            this.radioButtonPhoneSpeaker.AutoSize = true;
+            this.radioButtonPhoneSpeaker.Location = new System.Drawing.Point(6, 78);
+            this.radioButtonPhoneSpeaker.Name = "radioButtonPhoneSpeaker";
+            this.radioButtonPhoneSpeaker.Size = new System.Drawing.Size(99, 17);
+            this.radioButtonPhoneSpeaker.TabIndex = 11;
+            this.radioButtonPhoneSpeaker.TabStop = true;
+            this.radioButtonPhoneSpeaker.Text = "Phone Speaker";
+            this.radioButtonPhoneSpeaker.UseVisualStyleBackColor = true;
             // 
             // groupBoxCharge
             // 
@@ -134,16 +134,16 @@
             this.groupBoxCharge.TabIndex = 16;
             this.groupBoxCharge.TabStop = false;
             // 
-            // radioButtonWirelessCharge
+            // radioButtonIPhoneCharge
             // 
-            this.radioButtonWirelessCharge.AutoSize = true;
-            this.radioButtonWirelessCharge.Location = new System.Drawing.Point(6, 55);
-            this.radioButtonWirelessCharge.Name = "radioButtonWirelessCharge";
-            this.radioButtonWirelessCharge.Size = new System.Drawing.Size(102, 17);
-            this.radioButtonWirelessCharge.TabIndex = 13;
-            this.radioButtonWirelessCharge.TabStop = true;
-            this.radioButtonWirelessCharge.Text = "Wireless Charge";
-            this.radioButtonWirelessCharge.UseVisualStyleBackColor = true;
+            this.radioButtonIPhoneCharge.AutoSize = true;
+            this.radioButtonIPhoneCharge.Location = new System.Drawing.Point(6, 9);
+            this.radioButtonIPhoneCharge.Name = "radioButtonIPhoneCharge";
+            this.radioButtonIPhoneCharge.Size = new System.Drawing.Size(96, 17);
+            this.radioButtonIPhoneCharge.TabIndex = 11;
+            this.radioButtonIPhoneCharge.TabStop = true;
+            this.radioButtonIPhoneCharge.Text = "IPhone Charge";
+            this.radioButtonIPhoneCharge.UseVisualStyleBackColor = true;
             // 
             // radioButtonMicroUSBCharge
             // 
@@ -156,16 +156,16 @@
             this.radioButtonMicroUSBCharge.Text = "MicroUSB Charge";
             this.radioButtonMicroUSBCharge.UseVisualStyleBackColor = true;
             // 
-            // radioButtonIPhoneCharge
+            // radioButtonWirelessCharge
             // 
-            this.radioButtonIPhoneCharge.AutoSize = true;
-            this.radioButtonIPhoneCharge.Location = new System.Drawing.Point(6, 9);
-            this.radioButtonIPhoneCharge.Name = "radioButtonIPhoneCharge";
-            this.radioButtonIPhoneCharge.Size = new System.Drawing.Size(96, 17);
-            this.radioButtonIPhoneCharge.TabIndex = 11;
-            this.radioButtonIPhoneCharge.TabStop = true;
-            this.radioButtonIPhoneCharge.Text = "IPhone Charge";
-            this.radioButtonIPhoneCharge.UseVisualStyleBackColor = true;
+            this.radioButtonWirelessCharge.AutoSize = true;
+            this.radioButtonWirelessCharge.Location = new System.Drawing.Point(6, 55);
+            this.radioButtonWirelessCharge.Name = "radioButtonWirelessCharge";
+            this.radioButtonWirelessCharge.Size = new System.Drawing.Size(102, 17);
+            this.radioButtonWirelessCharge.TabIndex = 13;
+            this.radioButtonWirelessCharge.TabStop = true;
+            this.radioButtonWirelessCharge.Text = "Wireless Charge";
+            this.radioButtonWirelessCharge.UseVisualStyleBackColor = true;
             // 
             // groupBoxWatch
             // 
@@ -179,27 +179,16 @@
             this.groupBoxWatch.TabIndex = 17;
             this.groupBoxWatch.TabStop = false;
             // 
-            // radioButtonNoNameWatch
+            // radioButtonAppleWatch
             // 
-            this.radioButtonNoNameWatch.AutoSize = true;
-            this.radioButtonNoNameWatch.Location = new System.Drawing.Point(0, 78);
-            this.radioButtonNoNameWatch.Name = "radioButtonNoNameWatch";
-            this.radioButtonNoNameWatch.Size = new System.Drawing.Size(105, 17);
-            this.radioButtonNoNameWatch.TabIndex = 18;
-            this.radioButtonNoNameWatch.TabStop = true;
-            this.radioButtonNoNameWatch.Text = "No Name Watch";
-            this.radioButtonNoNameWatch.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonSamsungWatch
-            // 
-            this.radioButtonSamsungWatch.AutoSize = true;
-            this.radioButtonSamsungWatch.Location = new System.Drawing.Point(0, 55);
-            this.radioButtonSamsungWatch.Name = "radioButtonSamsungWatch";
-            this.radioButtonSamsungWatch.Size = new System.Drawing.Size(104, 17);
-            this.radioButtonSamsungWatch.TabIndex = 17;
-            this.radioButtonSamsungWatch.TabStop = true;
-            this.radioButtonSamsungWatch.Text = "Samsung Watch";
-            this.radioButtonSamsungWatch.UseVisualStyleBackColor = true;
+            this.radioButtonAppleWatch.AutoSize = true;
+            this.radioButtonAppleWatch.Location = new System.Drawing.Point(0, 9);
+            this.radioButtonAppleWatch.Name = "radioButtonAppleWatch";
+            this.radioButtonAppleWatch.Size = new System.Drawing.Size(87, 17);
+            this.radioButtonAppleWatch.TabIndex = 15;
+            this.radioButtonAppleWatch.TabStop = true;
+            this.radioButtonAppleWatch.Text = "Apple Watch";
+            this.radioButtonAppleWatch.UseVisualStyleBackColor = true;
             // 
             // radioButtonXiomiWatch
             // 
@@ -212,22 +201,33 @@
             this.radioButtonXiomiWatch.Text = "Xiomi Watch";
             this.radioButtonXiomiWatch.UseVisualStyleBackColor = true;
             // 
-            // radioButtonAppleWatch
+            // radioButtonSamsungWatch
             // 
-            this.radioButtonAppleWatch.AutoSize = true;
-            this.radioButtonAppleWatch.Location = new System.Drawing.Point(0, 9);
-            this.radioButtonAppleWatch.Name = "radioButtonAppleWatch";
-            this.radioButtonAppleWatch.Size = new System.Drawing.Size(87, 17);
-            this.radioButtonAppleWatch.TabIndex = 15;
-            this.radioButtonAppleWatch.TabStop = true;
-            this.radioButtonAppleWatch.Text = "Apple Watch";
-            this.radioButtonAppleWatch.UseVisualStyleBackColor = true;
+            this.radioButtonSamsungWatch.AutoSize = true;
+            this.radioButtonSamsungWatch.Location = new System.Drawing.Point(0, 55);
+            this.radioButtonSamsungWatch.Name = "radioButtonSamsungWatch";
+            this.radioButtonSamsungWatch.Size = new System.Drawing.Size(104, 17);
+            this.radioButtonSamsungWatch.TabIndex = 17;
+            this.radioButtonSamsungWatch.TabStop = true;
+            this.radioButtonSamsungWatch.Text = "Samsung Watch";
+            this.radioButtonSamsungWatch.UseVisualStyleBackColor = true;
             // 
-            // SebaMobile_Form
+            // radioButtonNoNameWatch
+            // 
+            this.radioButtonNoNameWatch.AutoSize = true;
+            this.radioButtonNoNameWatch.Location = new System.Drawing.Point(0, 78);
+            this.radioButtonNoNameWatch.Name = "radioButtonNoNameWatch";
+            this.radioButtonNoNameWatch.Size = new System.Drawing.Size(105, 17);
+            this.radioButtonNoNameWatch.TabIndex = 18;
+            this.radioButtonNoNameWatch.TabStop = true;
+            this.radioButtonNoNameWatch.Text = "No Name Watch";
+            this.radioButtonNoNameWatch.UseVisualStyleBackColor = true;
+            // 
+            // SebaMobileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 265);
+            this.ClientSize = new System.Drawing.Size(387, 263);
             this.Controls.Add(this.groupBoxWatch);
             this.Controls.Add(this.groupBoxCharge);
             this.Controls.Add(this.groupBoxHeadset);

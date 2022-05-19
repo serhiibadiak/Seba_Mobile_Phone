@@ -45,6 +45,8 @@
     <Compile Include="Charges\IPhoneCharge.cs" />
     <Compile Include="Charges\MicroUsbCharge.cs" />
     <Compile Include="Charges\WirelessCharge.cs" />
+    <Compile Include="Interfaces\IDateTimeProvider.cs" />
+    <Compile Include="Misc\DateTimeProvider.cs" />
     <Compile Include="Misc\Size.cs" />
     <Compile Include="Headsets\ChinaHeadset.cs" />
     <Compile Include="Headsets\IPhoneHeadset.cs" />
@@ -58,6 +60,7 @@
     <Compile Include="Interfaces\IOutput.cs" />
     <Compile Include="Interfaces\IPlayback.cs" />
     <Compile Include="Interfaces\IScreenImage.cs" />
+    <Compile Include="Misc\SMSProvider.cs" />
     <Compile Include="Mobile.cs" />
     <Compile Include="Notification devices\AppleWatch.cs" />
     <Compile Include="Notification devices\NoNameWatch.cs" />
