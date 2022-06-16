@@ -1,12 +1,13 @@
 ﻿using SebaMobileLib.Interfaces;
+using SebaMobileLib.Enums;
 
 namespace SebaMobileLib.Misc
 {
     public class SMSProvider
     {
-        public delegate void SMSReceivedDelegate(string message);
+        public delegate void SMSReceivedDelegate(SMSMessage message);
         public event SMSReceivedDelegate SMSReceived;
-        public delegate string FormatDelegate(string text);
+        public delegate string FormatDelegate(SMSMessage message);
         public IDateTimeProvider dateTimeProvider;
         public FormatDelegate Formatter;
         public SMSProvider()
@@ -14,47 +15,47 @@ namespace SebaMobileLib.Misc
             Formatter = new FormatDelegate(FormatMessageNone);
             dateTimeProvider = new DateTimeProvider();
         }
-        private string FormatMessageWithTime(string message)
+        private string FormatMessageWithTime(SMSMessage message)
         {
-            return $"[{dateTimeProvider.GetDateTime()}] {message}";
+            return $"[{message.RecivedTime}] {message.Text}";
         }
-        private string FormatMessageWithTimeInTheEnd(string message)
+        private string FormatMessageWithTimeInTheEnd(SMSMessage message)
         {
-            return $"{message} [{dateTimeProvider.GetDateTime()}]";
+            return $"{message.Text} [{message.RecivedTime}]";
         }
-        private string FormatMessageToLowerCase(string message)
+        private string FormatMessageToLowerCase(SMSMessage message)
         {
-            return $"{message.ToLower()}";
+            return $"{message.Text.ToLower()}";
         }
-        private string FormatMessageToUpperCase(string message)
+        private string FormatMessageToUpperCase(SMSMessage message)
         {
-            return $"{message.ToUpper()}";
+            return $"{message.Text.ToUpper()}";
         }
-        private string FormatMessageNone(string message)
+        private string FormatMessageNone(SMSMessage message)
         {
-            return message;
+            return message.Text;
         }
-        public void RaiseSMSRecievedEvent(string message)
+        public void RaiseSMSRecievedEvent(SMSMessage message)
         {
             SMSReceived?.Invoke(message);
         }
-        public void SetFormatter(int seqNumber)
+        public void SetFormatter(Formatters formatType)
         {
-            switch (seqNumber)
+            switch (formatType)
             {
-                case 0:
+                case Formatters.ToUpperCase:
                     Formatter = FormatMessageToUpperCase;
                     break;
-                case 1:
+                case Formatters.ToLowerCasse:
                     Formatter = FormatMessageToLowerCase;
                     break;
-                case 2:
+                case Formatters.DateFirst:
                     Formatter = FormatMessageWithTime;
                     break;
-                case 3:
+                case Formatters.DateLast:
                     Formatter = FormatMessageWithTimeInTheEnd;
                     break;
-                case 4:
+                case Formatters.None:
                     Formatter = FormatMessageNone;
                     break;
                 default:

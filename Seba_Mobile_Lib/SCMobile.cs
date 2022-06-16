@@ -1,6 +1,7 @@
 ﻿using SebaMobileLib.Interfaces;
 using SebaMobileLib.Misc;
 using SebaMobileLib.PhoneParts;
+using System.Collections.Generic;
 
 namespace SebaMobileLib
 {
@@ -19,9 +20,16 @@ namespace SebaMobileLib
         public new Speaker Speaker { get; }
         public IPlayback PlaybackDevice;
         public SMSProvider SMSProvider { get; set; }
+        public List<SMSMessage> SMSCollection;
         public SimCorpMobile(IPlayback PlaybackComp, ICharge ChargeComp, INotification NotificationComp)
             : base(PlaybackComp, ChargeComp, NotificationComp)
         {
+            SMSProvider = new SMSProvider();
+        }
+        public SimCorpMobile()
+            : base()
+        {
+            SMSCollection = new List<SMSMessage>();
             SMSProvider = new SMSProvider();
         }
     }

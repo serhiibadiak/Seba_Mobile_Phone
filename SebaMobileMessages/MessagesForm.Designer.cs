@@ -1,4 +1,4 @@
-﻿
+﻿using SebaMobileLib.Enums;
 namespace SebaMobileMessages
 {
     partial class SebaMobileMessagesForm
@@ -37,16 +37,17 @@ namespace SebaMobileMessages
             // 
             // MessageFormatterComboBox
             // 
+            this.MessageFormatterComboBox.DataSource = new SebaMobileLib.Enums.Formatters[] {
+        SebaMobileLib.Enums.Formatters.ToLowerCasse,
+        SebaMobileLib.Enums.Formatters.ToUpperCase,
+        SebaMobileLib.Enums.Formatters.DateLast,
+        SebaMobileLib.Enums.Formatters.DateFirst,
+        SebaMobileLib.Enums.Formatters.None};
             this.MessageFormatterComboBox.Location = new System.Drawing.Point(13, 12);
             this.MessageFormatterComboBox.Name = "MessageFormatterComboBox";
-            this.MessageFormatterComboBox.Items.AddRange(new object[] {
-            "Uppercase",
-            "Lowercase",
-            "Date first",
-            "Date last",
-            "None"});
             this.MessageFormatterComboBox.Size = new System.Drawing.Size(283, 21);
             this.MessageFormatterComboBox.TabIndex = 21;
+            this.MessageFormatterComboBox.SelectedIndexChanged += new System.EventHandler(this.MessageFormatterComboBox_SelectedIndexChanged);
             // 
             // MessageTextBox
             // 

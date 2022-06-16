@@ -1,5 +1,9 @@
 ﻿using SebaMobileLib.Interfaces;
 using SebaMobileLib.PhoneParts;
+using SebaMobileLib.Output;
+using SebaMobileLib.Charges;
+using SebaMobileLib.Headsets;
+using SebaMobileLib.NotificationDevices;
 using System.Text;
 
 namespace SebaMobileLib
@@ -11,6 +15,18 @@ namespace SebaMobileLib
             PlaybackComponent = PlaybackComp;
             PhoneCharger = ChargeComp;
             SmartWatch = NotificationComp;
+            this.Kboard = new Keyboard();
+            this.Battery = new Battery();
+            this.Body = new Body();
+            this.Speaker = new Speaker();
+            this.Microphone = new Microphone();
+        }
+        public Mobile()
+        {
+            ConsoleOutput output = new ConsoleOutput();
+            PlaybackComponent = new IPhoneHeadset(output);
+            PhoneCharger = new IPhoneCharge(output); ;
+            SmartWatch = new AppleWatch(output);
             this.Kboard = new Keyboard();
             this.Battery = new Battery();
             this.Body = new Body();

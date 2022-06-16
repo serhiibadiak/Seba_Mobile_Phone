@@ -4,8 +4,10 @@ using SebaMobileLib.Headsets;
 using SebaMobileLib.Interfaces;
 using SebaMobileLib.NotificationDevices;
 using SebaMobileLib.Output;
+using SebaMobileLib.Enums;
 using System;
 using System.Windows.Forms;
+using SebaMobileLib.Misc;
 
 namespace SebaMobileMessages
 {
@@ -15,13 +17,12 @@ namespace SebaMobileMessages
         public SebaMobileMessagesForm()
         {
             InitializeComponent();
-            IOutput outputInstance = new ContainerOutput(this.MessageTextBox);
-            this.myMobile = new SimCorpMobile(new IPhoneHeadset(outputInstance), new IPhoneCharge(outputInstance), new AppleWatch(outputInstance));
+            this.myMobile = new SimCorpMobile();
             this.myMobile.SMSProvider.SMSReceived += OnSMSReceived;
         }
-        private void OnSMSReceived(string message)
+        private void OnSMSReceived(SMSMessage message)
         {
-            myMobile.SMSProvider.SetFormatter(this.MessageFormatterComboBox.SelectedIndex);
+            myMobile.SMSProvider.SetFormatter((Formatters)this.MessageFormatterComboBox.SelectedItem);
 
             string formatedMessage = $"{myMobile.SMSProvider.Formatter(message)}{Environment.NewLine}";
             MessageTextBox.AppendText(formatedMessage);
@@ -30,8 +31,21 @@ namespace SebaMobileMessages
 
         private void timerSMS_Tick(object sender, EventArgs e)
         {
-            myMobile.SMSProvider.RaiseSMSRecievedEvent("New SMS 123.");
+            SMSMessage newSMS = new SMSMessage();
+            myMobile.SMSCollection.Add(newSMS);
+            myMobile.SMSProvider.RaiseSMSRecievedEvent(newSMS);
             return;
+        }
+
+        private void MessageFormatterComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            myMobile.SMSProvider.SetFormatter((Formatters)this.MessageFormatterComboBox.SelectedItem);
+            string formattedText = "";
+            foreach (var sms in myMobile.SMSCollection)
+            {
+                formattedText += $"{myMobile.SMSProvider.Formatter(sms)}{Environment.NewLine}";
+            }
+            MessageTextBox.Text = formattedText;
         }
     }
 }
